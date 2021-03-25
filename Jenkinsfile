@@ -15,11 +15,11 @@ pipeline {
 
     stage('Check Maven') {
       steps {
-        mavenSnapshotCheck(check: true)
+        mavenSnapshotCheck()
       }
     }
 
-    stage('') {
+    stage('Jacoco') {
       steps {
         jacoco(maximumBranchCoverage: '80', maximumClassCoverage: '80', maximumComplexityCoverage: '80', maximumInstructionCoverage: '80', maximumLineCoverage: '80', maximumMethodCoverage: '80', minimumBranchCoverage: '20', minimumClassCoverage: '20', minimumComplexityCoverage: '20', minimumInstructionCoverage: '20', minimumLineCoverage: '20', minimumMethodCoverage: '20')
       }
