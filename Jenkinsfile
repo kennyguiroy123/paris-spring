@@ -27,7 +27,7 @@ pipeline {
 
     stage('Tests') {
       steps {
-        junit 'Tests'
+        maven_invoker(reportsFilenamePattern: 'tests', invokerBuildDir: 'testdir')
       }
     }
 
