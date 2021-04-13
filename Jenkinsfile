@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('Tests') {
+      steps {
+        junit 'Tests'
+      }
+    }
+
   }
 }
