@@ -33,7 +33,7 @@ pipeline {
 
     stage('Junit') {
       steps {
-        publishCoverage()
+        junit 'Test'
       }
     }
 
