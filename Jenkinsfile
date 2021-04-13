@@ -31,11 +31,5 @@ pipeline {
       }
     }
 
-    stage('Junit') {
-      steps {
-        junit 'Test'
-      }
-    }
-
   }
 }
